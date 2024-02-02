@@ -7,6 +7,10 @@ alpha= string.ascii_letters
 def encryption(plaintext,key):
     ciphertext=" "
     
+# Validation whether key is integer
+    if not isinstance(key, int):
+       raise TypeError("Key must be an integer")
+    
 # Iteration of each character through plaintext
     for character in plaintext:
         
@@ -25,6 +29,10 @@ def encryption(plaintext,key):
 def decryption(ciphertext,key):
     plaintext=" "
     
+# Validation whether key is integer
+    if not isinstance(key, int):
+       raise TypeError("Key must be an integer")
+
 # Iteration of each character through ciphertext
     for character in ciphertext:
         
